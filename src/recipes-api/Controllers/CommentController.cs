@@ -20,20 +20,37 @@ public class CommentController : ControllerBase
         this._service = service;
     }
 
-    // 10 - Sua aplicação deve ter o endpoint POST /comment
+
     [HttpPost]
     public IActionResult Create([FromBody] Comment comment)
     {
-        if (comment == null)
-            return BadRequest();
-        _service.AddComment(comment);
-        return CreatedAtRoute("GetComment", new { name = comment.RecipeName }, comment);
+        try
+        {
+            if (comment == null)
+                return BadRequest();
+            _service.AddComment(comment);
+            return CreatedAtRoute("GetComment", new { name = comment }, comment);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 
-    // 11 - Sua aplicação deve ter o endpoint GET /comment/:recipeName
+
     [HttpGet("{name}", Name = "GetComment")]
     public IActionResult Get(string name)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var comment = _service.GetComments(name);
+            if (comment == null)
+                return NotFound();
+            return Ok(comment);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
     }
 }
