@@ -1,10 +1,37 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# API de Receitas
+
+## Funcionalidades
+
+A API de Receitas permite:
+
+- Listar, adicionar, atualizar e remover receitas.
+- Consultar detalhes de receitas por nome.
+- Cadastrar, atualizar e remover usuários.
+- Adicionar comentários às receitas.
+- Consultar comentários por nome da receita.
+
+
+## Como Rodar
+
+1. Clone o repositório:
+
+   ```
+    git clone https://github.com/gabesouto/recipe-api.git
+   ```
+
+2. vá para a pasta do projeto
+    ```
+      cd recipe-api && cd src
+    ```
+
+3. Instale as dependências do projeto
+     ```
+     dotnet restore
+     ```
+
+4. Rode o projeto
+    ```
+    dotnet run
+    ```
+    
+    
