@@ -19,16 +19,17 @@ Welcome to the Recipe API project, an essential extension for our beloved cookin
 ## Quick Integration:
 
 1. **Available Endpoints:**
-   - `/api/recipes`: Listing of all recipes.
-   - `/api/recipes/add`: Addition of a new recipe.
-   - `/api/recipes/remove/{id}`: Removal of a specific recipe.
-   - `/api/recipes/update/{id}`: Updating details of a recipe.
-   - `/api/users/register`: Registration of a new user.
-   - `/api/users/remove/{id}`: Removal of a specific user.
-   - `/api/users/query/{id}`: Querying user data.
-   - `/api/users/update/{id}`: Updating user data.
-   - `/api/comments/register`: Registration of a new comment.
-   - `/api/comments/query/{recipeId}`: Querying comments associated with a recipe.
+   - `GET /api/recipes`: Retrieve a list of all recipes.
+   - `POST /api/recipes`: Add a new recipe.
+   - `DELETE /api/recipes/{id}`: Remove a specific recipe.
+   - `PUT /api/recipes/{id}`: Update details of a recipe.
+   - `POST /api/users/register`: Register a new user.
+   - `DELETE /api/users/{id}`: Remove a specific user.
+   - `GET /api/users/{id}`: Query user data.
+   - `PUT /api/users/{id}`: Update user data.
+   - `POST /api/comments`: Register a new comment.
+   - `GET /api/comments/{recipeId}`: Query comments associated with a recipe.
+
 
 2. **Data Models:**
    - All necessary models are already available for integration.
